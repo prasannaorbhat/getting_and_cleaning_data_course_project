@@ -86,5 +86,7 @@ colnames(tidy_data)[2] <- "Subject_code"
 tidy_data$ActivityType <- NULL
 tidy_data$Subject <- NULL
 
-# Write output table "tidy_output.csv"
-write.csv(tidy_data, "tidy_output.csv", row.names=FALSE)
+# Write output table "tidy_output.txt"
+write.table(tidy_data, file = "tidy_output.txt", row.names=FALSE)
+
+
