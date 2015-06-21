@@ -22,8 +22,8 @@ For each record in the dataset it is provided:
 •	Its activity label.
 •	An identifier of the subject who carried out the experiment.
 
-## Step 4: Join x, y and subject files in training data sets and test data sets separately using cbind function
-## Step 5: Merge training and test data sets using rbind function
+## Step 4: Join x, y and subject files in training data sets and test data sets separately using cbind() function
+## Step 5: Merge training and test data sets using rbind() function
 ## Step 6: Name the columns appropriately which acts as main data frame
 ## Step 7: Extract only columns containing mean and std by subsetting the main data frame
 ## Step 8: Substitute activity id with activity type such as walking, running etc
