@@ -1,4 +1,4 @@
-# This is the repository for the submission of the course project for the Coursera Getting and Cleaning Data course
+# This is the repository for the submission of the course project for the Coursera : Getting and Cleaning Data course
 
 ## Overview
 This project work is to demonstrate collection of data from web, cleaning and make it in to tidy data so that it is ready for further analysis
