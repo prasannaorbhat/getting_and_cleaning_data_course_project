@@ -41,3 +41,4 @@ For each record in the dataset it is provided:
 ## Step 9: Create another dataframe with average of each variable for each activity and subject
 Follow tidy data principle to create this data frame
 ## Ste 10: write the tidy data set in to a table
+results are stored in tidy_output.txt: https://github.com/prasannaorbhat/getting_and_cleaning_data_course_project/blob/master/tidy_output.txt
