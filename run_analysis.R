@@ -78,15 +78,20 @@ colnames(mydf_mean_std)<- gsub("gravity", "Gravity", colnames(mydf_mean_std))
 mydf_mean_std_decoded <- merge(activity_labels,mydf_mean_std, by="ActivityID", all.x = TRUE)
 
 # prepare tidy data grouped by Activity and Subject
-tidy_data <- aggregate(mydf_mean_std_decoded, by=list(mydf_mean_std_decoded$ActivityType, mydf_mean_std$Subject), FUN=mean)
+
+library(dplyr)
+grouped_mydf <- group_by(mydf_mean_std_decoded,ActivityType,Subject)
+# gettign the average for each columns with measurements. grouped by activity and subject
+tidy_data_avrg <- summarise_each(grouped_mydf,funs(mean))
 
 # rename columns in tidy data
-colnames(tidy_data)[1] <- "Activity_type"
-colnames(tidy_data)[2] <- "Subject_code"
-tidy_data$ActivityType <- NULL
-tidy_data$Subject <- NULL
+colnames(tidy_data_avrg)[1] <- "Activity_type"
+colnames(tidy_data_avrg)[2] <- "Subject_code"
+tidy_data_avrg$ActivityType <- NULL
+tidy_data_avrg$Subject <- NULL
 
 # Write output table "tidy_output.txt"
-write.table(tidy_data, file = "tidy_output.txt", row.names=FALSE)
+write.table(tidy_data_avrg, file = "tidy_output.txt", row.names=FALSE)
+
 
 
